@@ -3,7 +3,7 @@ package Person;
 public class Person {
     private String fname;
     private String lname;
-    private int[] conNumber;
+    private String[] conNumber;
     private String email;
     private int headC;
 
@@ -12,16 +12,16 @@ public class Person {
         this.fname=fname;
         this.lname=lname;
         email=null;
-        conNumber=new int[10];
+        conNumber= new String[10];
         headC=0;
 
     }
-    public void setConNumber(int i){
+    public void setConNumber(String i){
         this.conNumber[headC]=i;
         headC++;
     }
 
-    public int[] getConNumber(){
+    public String[] getConNumber(){
         return  conNumber;
     }
     public void setEmail(String email){

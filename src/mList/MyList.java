@@ -36,11 +36,11 @@ public class MyList {
                 System.out.println("First Name: " + e.getFname());
                 System.out.println("Last Name: " + e.getLname());
                 System.out.print("Contact Number(s): ");
-                int[] no = e.getConNumber();
+                String[] no = e.getConNumber();
                 for (int i = 0; i < no.length; i++) {
-                    if (no[i] != 0) {
+                    if (no[i] != null) {
                         System.out.print(no[i]);
-                        if (no[i + 1] != 0) {
+                        if (no[i + 1] != null) {
                             System.out.print(", ");
                         }
                     }
@@ -73,11 +73,11 @@ public class MyList {
                     System.out.println("First Name: " + temp1.getFname());
                     System.out.println("Last Name: " + temp1.getLname());
                     System.out.print("Contact Number(s): ");
-                    int[] no = temp1.getConNumber();
+                    String[] no = temp1.getConNumber();
                     for (int i = 0; i < no.length; i++) {
-                        if (no[i] != 0) {
+                        if (no[i] != null) {
                             System.out.print(no[i]);
-                            if (no[i + 1] != 0) {
+                            if (no[i + 1] != null) {
                                 System.out.print(", ");
                             }
                         }
@@ -113,20 +113,21 @@ public class MyList {
             if(head.getData().getFname().equals(delfname)){
                 head=head.getNext();
                 temp=head;
-                System.out.println(delfname + "'s contact deleted from list!");
+                System.out.println(delfname + "'s contact deleted from list!3");
             }
-            if (head.getNext() != null){
+            else if (head.getNext() != null){
                 while (temp != null) {
 
                     Person temp1 = temp.getData();
                     if (temp.getNext().getData().getFname().equals(delfname) && temp.getNext()!=null) {
                         Node temp7 = temp.getNext().getNext();
                         temp.setNext(temp7);
-                        System.out.println(delfname + "'s contact deleted from list!");
+                        System.out.println(delfname + "'s contact deleted from list!2");
                         break;
                     }
                     else if(temp.getNext().getData().getFname().equals(delfname)&& temp.getNext().getNext()==null){
                         temp.setNext(null);
+                        break;
                     }
                     temp = temp.getNext();
                 }
@@ -134,7 +135,7 @@ public class MyList {
                 Person tempu = head.getData();
                 if (tempu.getFname().equals(delfname)) {
                     head = null;
-                    System.out.println(delfname + "'s contact deleted from list!");
+                    System.out.println(delfname + "'s contact deleted from list!1");
                 }
             }
 

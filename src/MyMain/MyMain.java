@@ -29,16 +29,15 @@ public class MyMain {
                     String lname=sc.nextLine();
                     Person person=new Person(fname,lname);
                     System.out.print("Contact Number: ");
-                    int con=sc.nextInt();
+                    String con=sc.nextLine();
                     person.setConNumber(con);
-                    sc.nextLine();
+
                     System.out.print("Would you like to add another contact number? (y/n):");
                     String w=sc.nextLine();
                     while(!(w.equals("n"))) {
                         System.out.print("Contact Number: ");
-                        con = sc.nextInt();
+                        con = sc.nextLine();
                         person.setConNumber(con);
-                        sc.nextLine();
                         System.out.print("Would you like to add another contact number? (y/n):");
                         w = sc.nextLine();
                     }
