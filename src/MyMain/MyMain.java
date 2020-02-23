@@ -69,6 +69,10 @@ public class MyMain {
                     System.out.print("Please enter first name whose contact you want delete:- ");
                     String delfname=sc.nextLine();
                     obj.delete(delfname);
+                    break;
+                default:
+                    System.out.println("!!!! Wrong choice!!!!");
+                    System.out.println("Enter correct choice------------>");
 
             }
 
